@@ -3,11 +3,6 @@ import styles from './subheader.module.scss';
 
 class SubHeader extends Component {
 
-  componentDidMount() {
-    console.log("styles ", styles);
-
-  }
-
   render() {
     return (
       <section>

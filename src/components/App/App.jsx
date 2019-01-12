@@ -11,10 +11,10 @@ class App extends Component {
         <SubHeader />
         <section className="container">
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-12 col-md-8">
               <Chart />
             </div>
-            <div className="col-md-4">
+            <div className="col-12 col-md-4">
               <ListCandidate />
             </div>
           </div>

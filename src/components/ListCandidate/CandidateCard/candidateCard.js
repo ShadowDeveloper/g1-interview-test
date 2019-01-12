@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './candidateCard.scss';
+import styles from './candidateCard.module.scss';
 
 class CandidateCard extends Component {
 
@@ -11,13 +11,14 @@ class CandidateCard extends Component {
   render() {
     return (
       <section>
-        Card de Candidatos
+        <span className={styles.selectCandidate}>{this.props.selectCandidateText}</span>
       </section>
     )
   }
 }
 
 CandidateCard.defaultProps = {
+  selectCandidateText: "Escolha a cidade para ver a lista de candidatos"
 }
 
 export default CandidateCard;

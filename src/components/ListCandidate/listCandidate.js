@@ -6,13 +6,12 @@ class ListCandidate extends Component {
 
   componentDidMount() {
     console.log("styles ", styles);
-
   }
 
   render() {
     return (
-      <section>
-        Lista de Candidatos
+      <section className={styles.listCandidate}>
+        <span className={styles.listCandidate__title}>{this.props.titleLista}</span>
         <CandidateCard />
       </section>
     )
@@ -20,7 +19,7 @@ class ListCandidate extends Component {
 }
 
 ListCandidate.defaultProps = {
-
+  titleLista: "Candidatos"
 }
 
 export default ListCandidate
