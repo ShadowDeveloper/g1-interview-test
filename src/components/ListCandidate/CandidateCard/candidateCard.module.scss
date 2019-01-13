@@ -1,4 +1,54 @@
+@import '../../../mixins';
+@import '../../../variables';
+
 .candidateCard {
+    .candidateImage{
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid #DBDBDB;
+        width: 45px;
+        height: 45px;
+        margin: 0 auto;
+    }
+    .cardPadding{
+        padding: 20px 0;
+    }
+    .candidateName{
+        margin-bottom: 10px;
+        display: block;
+        @include textStyle(12px, 700, $gray-2);
+    }
+    .candidatePoliticalParty{
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        display: block;
+        @include textStyle(10px, 400, $gray-2);
+    }
+    .candidateStatusTag{
+        background-color:$green-1;
+        height: 13px;
+        border-radius: 10px;
+        padding: 2px 5px;
+        display: table;
+        margin-left: 10px;
+        @include textStyle(10px, 700, #fff);
+    } 
+    .candidateVotesBar{
+        height: 8px;
+        border-radius: 5px; 
+        width: 100%;
+        background-color: $gray-5;
+        overflow: hidden;
+    }
+    .cadidateVotesPercent{
+        display: block;
+        @include textStyle(22px, 300, $gray-2);
+        margin-bottom: 10px;
+    }
+    .cadidateTotalVotes {
+        display: block;
+        @include textStyle(10px, 400, $gray-2);
+    }
 }
 .selectCandidate { 
     padding: 35px 0;
