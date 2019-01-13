@@ -5,17 +5,16 @@ class CandidateCard extends Component {
 
   componentDidMount() {
     console.log("styles ", styles);
-
   }
 
   render() {
     return (
       <section className={styles.candidateCard}>
         <div className={`row ${styles.cardPadding}`}>
-          <div className="col-md-3">
+          <div className="col-2 col-md-3">
             <div className={styles.candidateImage}></div>
           </div>
-          <div className="col-md-5">
+          <div className="col-6 col-md-5">
             <span className={styles.candidateName}>
               Nome do cadidato
             </span>
@@ -26,7 +25,7 @@ class CandidateCard extends Component {
               <div style={{ backgroundColor: "red", width: "50%", height: "100%" }}></div>
             </div>
           </div>
-          <div className="col-md-4 text-center">
+          <div className="col-4 col-md-4 text-center">
             <span className={styles.cadidateVotesPercent}>
               12,34%
             </span>
