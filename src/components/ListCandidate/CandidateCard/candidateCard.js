@@ -3,9 +3,7 @@ import styles from './candidateCard.module.scss';
 
 class CandidateCard extends Component {
 
-  componentDidMount() {
-    console.log("styles ", styles);
-  }
+  componentDidMount() {}
 
   render() {
     return (

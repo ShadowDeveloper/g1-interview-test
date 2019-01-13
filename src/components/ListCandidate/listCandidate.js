@@ -4,9 +4,7 @@ import CandidateCard from './CandidateCard/candidateCard';
 
 class ListCandidate extends Component {
 
-  componentDidMount() {
-    console.log("styles ", styles);
-  }
+  componentDidMount() {}
 
   render() {
     return (
