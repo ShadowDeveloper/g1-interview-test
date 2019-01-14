@@ -18,7 +18,8 @@ class Chart extends Component {
       .translate([800 / 2, 450 / 2])
   }
   componentDidMount() {
-    fetch('RJ.json',
+    // fetch('data/RJ.json',
+    fetch('data/baseMap.json',
       {
         headers: {
           'Content-Type': 'application/json',
@@ -33,7 +34,7 @@ class Chart extends Component {
         }
         response.json().then(rioData => {
           this.setState({
-            rioData: topojson.feature(rioData, rioData.objects.collection).features,
+            rioData: topojson.feature(rioData, rioData.objects.counties).features,
             // rioData: topojson.feature(rioData, rioData.objects.collection).features,
           })
 
