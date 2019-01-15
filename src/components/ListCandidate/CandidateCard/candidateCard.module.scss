@@ -10,8 +10,9 @@
         height: 45px;
         margin: 0 auto;
     }
-    .cardPadding{
+    .card{
         padding: 20px 0;
+        border-bottom: 1px solid $gray-4;
     }
     .candidateName{
         margin-bottom: 10px;

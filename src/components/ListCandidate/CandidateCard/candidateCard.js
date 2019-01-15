@@ -3,32 +3,42 @@ import styles from './candidateCard.module.scss';
 
 class CandidateCard extends Component {
 
-  componentDidMount() {}
+  constructor(){
+    super()
+    this.formatarPercentual = this.formatarPercentual.bind(this)
+  }
+
+  componentDidMount() { }
+
+  formatarPercentual(percentual){
+    let percentualFormatado = percentual.replace(",",".")
+    return percentualFormatado;
+  }
 
   render() {
     return (
       <section className={styles.candidateCard}>
-        <div className={`row ${styles.cardPadding}`}>
+        <div className={`d-flex ${styles.card}`}>
           <div className="col-2 col-md-3">
             <div className={styles.candidateImage}></div>
           </div>
           <div className="col-6 col-md-5">
             <span className={styles.candidateName}>
-              Nome do cadidato
+              {this.props.candidato.nome_candidato}
             </span>
             <span className={`d-flex align-items-center ${styles.candidatePoliticalParty}`}>
-              LO <div className={styles.candidateStatusTag}>2° turno</div>
+              {this.props.candidato.sigla_partido} <div className={styles.candidateStatusTag}>{this.props.candidato.eleito === true ? "eleito" : "2° turno"}</div>
             </span>
             <div className={styles.candidateVotesBar}>
-              <div style={{ backgroundColor: "red", width: "50%", height: "100%" }}></div>
+              <div style={{ backgroundColor: this.props.candidato.cor_partido, width: this.formatarPercentual(this.props.candidato.total_percentual), height: "100%" }}></div>
             </div>
           </div>
           <div className="col-4 col-md-4 text-center">
             <span className={styles.cadidateVotesPercent}>
-              12,34%
+              {this.props.candidato.total_percentual}
             </span>
             <span className={styles.cadidateTotalVotes}>
-              123.345,90<br />votos
+              {this.props.candidato.total_votos_validos}<br />votos
             </span>
           </div>
         </div>
