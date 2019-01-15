@@ -1,3 +1,6 @@
+@import '../../mixins';
+@import '../../variables';
+
 .subHeader {
    width: 100%;
    background-color: #CCCCCC;
@@ -16,22 +19,20 @@
 }
 
 .breadcrumb {
-   background-color: #F6F4F7;
+   background-color: $gray-5;
    padding: 25px 0 0 0;
    text-transform: uppercase;
    margin-bottom: 15px;
    &__title {
-      font-weight: 800;
-      font-size: 30px;
+      @include textStyle(30px, 800, unset);
    }
    &__subtitle {
-      font-size: 30px;
-      font-weight: 300;
+      @include textStyle(30px, 300, unset);
    }
    &__marker{
       width: 90px;
-      background-color: #A80000;
-      color: #A80000;
+      background-color: $red-2;
+      color: $red-2;
       margin: 10px 0 0 0 ;
       padding: 0;
       height: 8px;
@@ -53,12 +54,10 @@
    .breadcrumb {
       padding: 15px 0 0 0;
       &__title {
-         font-weight: 800;
-         font-size: 22px;
+         @include textStyle(22px, 800, unset);
       }
       &__subtitle {
-         font-size: 22px;
-         font-weight: 300;
+         @include textStyle(22px, 300, unset);
       }
       &__marker{
          width: 70px;
