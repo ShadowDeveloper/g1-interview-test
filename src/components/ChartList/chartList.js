@@ -10,12 +10,6 @@ import {
     Geography,
 } from "react-simple-maps"
 
-const wrapperStyles = {
-    width: "100%",
-    maxWidth: 980,
-    margin: "0 auto",
-}
-
 class ChartList extends Component {
     constructor() {
         super()
@@ -32,7 +26,7 @@ class ChartList extends Component {
 
     projection() {
         return geoMercator()
-            .center([-42.5,-22.2])
+            .center([-42.5, -22.2])
             // .center([-43,-22])
             .scale(9700)
     }
