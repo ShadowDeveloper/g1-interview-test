@@ -8,12 +8,13 @@ class ListCandidate extends Component {
     super(props)
     this.state = {
       county: [],
-      idCounty: this.props.selectedCounty,
       actualCounty: {},
-      candidatesCounty: [],
+      countyReceived: 0
     }
   }
 
+ 
+  
   componentDidMount() {
     fetch('data/data.json',
       {
@@ -29,29 +30,30 @@ class ListCandidate extends Component {
           return
         }
         response.json().then(countyData => {
-
-          this.setState((prevState, props) => ({
-            county: countyData.municipios[props.selectedCounty].candidatos,
-          }));
-
+          if (this.state.countyReceived !== 0) {
+            this.setState((prevState, props) => ({
+              county: countyData.collection[props.selectedCounty].candidatos,
+            }));
+          }
         })
       })
   }
 
 
   componentWillReceiveProps() {
-    if (this.props.selectedCounty !== "") {
-      this.setState({ candidate: this.state.county.candidatos });
-    }
-  }
+    this.setState({
+      countyReceived: this.props.selectedCounty
+    })
 
+    console.log("this.state.countyReceived ", this.state.countyReceived);
+  }
 
   render() {
     return (
       <section className={styles.listCandidate}>
         <span className={styles.listCandidate__title}>{this.props.titleLista}</span>
         {this.state.county.map((c, i) =>
-          <CandidateCard key={i} candidato={c} />
+          <CandidateCard key={i} candidato={c} idMunicipio={this.state.countyReceived} />
         )}
       </section>
     )

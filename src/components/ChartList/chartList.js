@@ -22,6 +22,7 @@ class ChartList extends Component {
 
     handleClick(id) {
         this.setState({ idCounty: id });
+        console.log('this county ', this.state.idCounty);
     }
 
     projection() {
@@ -80,7 +81,7 @@ class ChartList extends Component {
                     </div>
                 </div>
                 <div className="col-12 col-md-4">
-                    <ListCandidate selectedCounty="3305901" />
+                    <ListCandidate selectedCounty={this.state.idCounty} />
                 </div>
             </div>
         )
