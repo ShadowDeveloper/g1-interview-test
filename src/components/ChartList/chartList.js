@@ -3,6 +3,18 @@ import * as topojson from "topojson-client";
 import { geoMercator, geoPath } from "d3-geo";
 import ListCandidate from './../ListCandidate/listCandidate';
 import styles from './chartList.module.scss';
+import {
+    ComposableMap,
+    ZoomableGroup,
+    Geographies,
+    Geography,
+} from "react-simple-maps"
+
+const wrapperStyles = {
+    width: "100%",
+    maxWidth: 980,
+    margin: "0 auto",
+}
 
 class ChartList extends Component {
     constructor() {
@@ -16,19 +28,16 @@ class ChartList extends Component {
 
     handleClick(id) {
         this.setState({ idCounty: id });
-        console.log("this.state.idCounty ", this.state.idCounty);
     }
 
     projection() {
         return geoMercator()
-            .center([0, 0])
-            .scale(100)
-            .translate([800 / 2, 450 / 2])
+            .center([-42.5,-22.2])
+            // .center([-43,-22])
+            .scale(9700)
     }
 
     componentDidMount() {
-
-        console.log(styles);
 
         fetch('data/RJ.json',
             {
@@ -45,7 +54,7 @@ class ChartList extends Component {
                 }
                 response.json().then(rioData => {
                     this.setState({
-                        rioData: topojson.feature(rioData, rioData.objects.municipios).features,
+                        rioData: topojson.feature(rioData, rioData.objects.collection).features,
                     })
                 })
             })
