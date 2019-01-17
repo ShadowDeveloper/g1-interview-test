@@ -236,68 +236,130 @@
 			"candidatos": [
 				{
 					"id_candidato": "72",
-					"total_percentual": "67,37%",
-					"total_votos_validos": "59.499"
+					"total_percentual": "46,08%",
+					"total_votos_validos": "2.650",
+					"sigla_partido": "PABK",
+					"eleito": true,
+					"nome_candidato": "DAVID",
+					"cor_partido": "#ff2f31"
 				},
 				{
 					"id_candidato": "60",
-					"total_percentual": "14,95%",
-					"total_votos_validos": "13.204"
+					"total_percentual": "33,68%",
+					"total_votos_validos": "1.937",
+					"sigla_partido": "PABA",
+					"eleito": true,
+					"nome_candidato": "FLOR",
+					"cor_partido": "#20a67c"
 				},
 				{
 					"id_candidato": "38",
-					"total_percentual": "9,85%",
-					"total_votos_validos": "8.696"
-				},
-				{
-					"id_candidato": "81",
-					"total_percentual": "2,24%",
-					"total_votos_validos": "1.976"
+					"total_percentual": "10,55%",
+					"total_votos_validos": "607",
+					"sigla_partido": "PAAD",
+					"eleito": false,
+					"nome_candidato": "VARUN",
+					"cor_partido": "#0089e1"
 				},
 				{
 					"id_candidato": "68",
-					"total_percentual": "2,16%",
-					"total_votos_validos": "1.909"
+					"total_percentual": "4,12%",
+					"total_votos_validos": "237",
+					"sigla_partido": "PABH",
+					"thumb_candidato": "sarah.jpg",
+					"eleito": false,
+					"nome_candidato": "SARAH",
+					"cor_partido": "#F1874B"
 				},
 				{
-					"id_candidato": "62",
-					"total_percentual": "1,13%",
-					"total_votos_validos": "998"
-				},
-				{
-					"id_candidato": "52",
-					"total_percentual": "0,75%",
-					"total_votos_validos": "662"
+					"id_candidato": "81",
+					"total_percentual": "1,76%",
+					"total_votos_validos": "101",
+					"sigla_partido": "PABS",
+					"thumb_candidato": "gemma.jpg",
+					"eleito": false,
+					"nome_candidato": "GEMMA",
+					"cor_partido": "#ffdc43"
 				},
 				{
 					"id_candidato": "26",
-					"total_percentual": "0,64%",
-					"total_votos_validos": "565"
-				},
-				{
-					"id_candidato": "80",
-					"total_percentual": "0,43%",
-					"total_votos_validos": "380"
+					"total_percentual": "1,11%",
+					"total_votos_validos": "64",
+					"sigla_partido": "PASQ",
+					"thumb_candidato": "catia.jpg",
+					"eleito": false,
+					"nome_candidato": "CATIA",
+					"cor_partido": "#6A3A90"
 				},
 				{
 					"id_candidato": "24",
-					"total_percentual": "0,40%",
-					"total_votos_validos": "349"
+					"total_percentual": "0,70%",
+					"total_votos_validos": "40",
+					"sigla_partido": "PASR",
+					"thumb_candidato": "mafalda.jpg",
+					"eleito": false,
+					"nome_candidato": "MAFALDA",
+					"cor_partido": "#87D37C"
+				},
+				{
+					"id_candidato": "52",
+					"total_percentual": "0,68%",
+					"total_votos_validos": "39",
+					"sigla_partido": "PAAL",
+					"thumb_candidato": "beatriz.jpg",
+					"eleito": false,
+					"nome_candidato": "BEATRIZ",
+					"cor_partido": "#0C7844"
+				},
+				{
+					"id_candidato": "62",
+					"total_percentual": "0,66%",
+					"total_votos_validos": "38",
+					"sigla_partido": "PABC",
+					"thumb_candidato": "valentina.jpg",
+					"eleito": false,
+					"nome_candidato": "VALENTINA",
+					"cor_partido": "#3441A1"
+				},
+				{
+					"id_candidato": "80",
+					"total_percentual": "0,49%",
+					"total_votos_validos": "28",
+					"sigla_partido": "PABR",
+					"thumb_candidato": "lucy.jpg",
+					"eleito": false,
+					"nome_candidato": "LUCY",
+					"cor_partido": "#F62459"
 				},
 				{
 					"id_candidato": "46",
-					"total_percentual": "0,04%",
-					"total_votos_validos": "34"
+					"total_percentual": "0,09%",
+					"total_votos_validos": "5",
+					"sigla_partido": "PAAH",
+					"thumb_candidato": "kiara.jpg",
+					"eleito": false,
+					"nome_candidato": "KIARA",
+					"cor_partido": "#F9BF3B"
 				},
 				{
 					"id_candidato": "92",
-					"total_percentual": "0,04%",
-					"total_votos_validos": "32"
+					"total_percentual": "0,05%",
+					"total_votos_validos": "3",
+					"sigla_partido": "DSWR",
+					"thumb_candidato": "paulo.jpg",
+					"eleito": false,
+					"nome_candidato": "PAULO",
+					"cor_partido": "#877D3C"
 				},
 				{
 					"id_candidato": "83",
-					"total_percentual": "0,01%",
-					"total_votos_validos": "12"
+					"total_percentual": "0,03%",
+					"total_votos_validos": "2",
+					"sigla_partido": "PEXG",
+					"thumb_candidato": "romeu.jpg",
+					"eleito": false,
+					"nome_candidato": "ROMEU",
+					"cor_partido": "#FBBF93"
 				}
 			]
 		},
