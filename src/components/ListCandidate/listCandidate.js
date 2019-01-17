@@ -9,7 +9,8 @@ class ListCandidate extends Component {
     this.state = {
       county: [],
       actualCounty: {},
-      countyReceived: 0
+      countyReceived: 0,
+      countyTeste: this.props.selectedCounty
     }
   }
 
@@ -30,9 +31,10 @@ class ListCandidate extends Component {
           return
         }
         response.json().then(countyData => {
+
           if (this.state.countyReceived !== 0) {
             this.setState((prevState, props) => ({
-              county: countyData.collection[props.selectedCounty].candidatos,
+              county: countyData.municipios[props.selectedCounty].candidatos,
             }));
           }
         })
@@ -44,8 +46,6 @@ class ListCandidate extends Component {
     this.setState({
       countyReceived: this.props.selectedCounty
     })
-
-    console.log("this.state.countyReceived ", this.state.countyReceived);
   }
 
   render() {

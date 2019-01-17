@@ -15,14 +15,15 @@ class ChartList extends Component {
         super()
         this.state = {
             rioData: [],
-            idCounty: 0,
+            idCounty: "3300100",
+            candidatesCountyData: ""
         }
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(id) {
         this.setState({ idCounty: id });
-        console.log('this county ', this.state.idCounty);
+        console.log(this.state.idCounty);
     }
 
     projection() {
@@ -32,8 +33,7 @@ class ChartList extends Component {
             .scale(9700)
     }
 
-    componentDidMount() {
-
+    getMapData() {
         fetch('data/RJ.json',
             {
                 headers: {
@@ -53,10 +53,41 @@ class ChartList extends Component {
                     })
                 })
             })
+    }
 
+    getCandidatesCountyData() {
+        fetch('data/data.json',
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }
+        )
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log(`There was a problem: ${response.status}`)
+                    return
+                }
+                response.json().then(data => {
+                    this.setState({
+                        candidatesCountyData: data
+                    })
+
+                    this.state.rioData.map(c => {
+                        c.properties.candidato = this.state.candidatesCountyData.municipios[c.properties.id].candidatos[0];
+                    })
+                })
+            })
+    }
+
+    componentDidMount() {
+        this.getMapData();
+        this.getCandidatesCountyData();
     }
 
     render() {
+
         return (
             <div className="row">
                 <div className="col-12 col-md-8">
@@ -68,8 +99,9 @@ class ChartList extends Component {
                                         <path
                                             key={`path-${i}`}
                                             d={geoPath().projection(this.projection())(d)}
-                                            className="municipio"
+                                            className={styles.municipio}
                                             fill={`rgba(38,50,56,${1 / this.state.rioData.length * i})`}
+                                            // teste={d.properties.candidato}
                                             stroke="#000"
                                             strokeWidth={0.5}
                                             onClick={() => this.handleClick(d.properties.id)}

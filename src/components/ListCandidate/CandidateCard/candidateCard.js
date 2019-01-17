@@ -8,9 +8,7 @@ class CandidateCard extends Component {
     this.formatarPercentual = this.formatarPercentual.bind(this)
   }
 
-  componentDidMount() {
-    console.log("this.props.idMunicipio ", this.props.idMunicipio);
-  }
+  componentDidMount() { }
 
   formatarPercentual(percentual) {
     let percentualFormatado = percentual.replace(",", ".")
